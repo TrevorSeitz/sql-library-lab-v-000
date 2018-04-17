@@ -52,6 +52,7 @@ def select_value_and_count_of_most_prolific_species
   GROUP BY species
   ORDER BY 2 DESC
   LIMIT 1"
+end
 
 def select_character_names_and_number_of_books_they_are_in
   "Write your SQL query here"
