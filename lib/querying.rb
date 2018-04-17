@@ -18,8 +18,8 @@ end
 
 def select_value_and_count_of_most_prolific_species
   "SELECT species
-  FROM characters
   ORDER BY COUNT(*) DESC
+  FROM characters
   LIMIT 1;"
 end
 
