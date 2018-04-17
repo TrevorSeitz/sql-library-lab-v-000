@@ -19,6 +19,7 @@ CREATE TABLE books (
   id INTEGER PRIMARY KEY,
   title TEXT,
   year INTEGER,
+  author_id INTEGER,
   series_id INTEGER
 );
 
