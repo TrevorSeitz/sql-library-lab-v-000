@@ -9,11 +9,11 @@ end
 
 
 def select_name_and_motto_of_char_with_longest_motto
-  # "SELECT characters.motto
-  # FROM characters
-  # WHERE motto = (SELECT MAX(motto.length));
-  # "
-  SELECT MAX(LENGTH(motto)) FROM characters;
+  "SELECT vharacters.name, characters.motto
+  FROM characters
+  WHERE motto = MAX(length(motto));
+  "
+  # SELECT MAX(LENGTH(motto)) FROM characters;
 end
 
 
