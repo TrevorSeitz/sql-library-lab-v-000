@@ -13,12 +13,14 @@ def select_name_and_motto_of_char_with_longest_motto
   FROM characters
   ORDER BY length(motto) DESC
   LIMIT 1;"
-  # SELECT MAX(LENGTH(motto)) FROM characters;
 end
 
 
 def select_value_and_count_of_most_prolific_species
-  "Write your SQL query here"
+  "SELECT species
+  FROM characters
+  ORDER BY count(species) descendingLIMIT 1
+  ;"
 end
 
 def select_name_and_series_subgenres_of_authors
