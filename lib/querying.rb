@@ -3,9 +3,10 @@ def select_books_titles_and_years_in_first_series_order_by_year
 end
 
 SELECT books.title, books.year
-FROM projects
-SET species = "cylon", species = "Martian"
-WHERE id=(SELECT MAX(id) FROM characters);
+FROM books
+INNER JOIN series_id
+ON series.id = series_id
+WHERE id=(SELECT MIN(id) FROM series);
 
 def select_name_and_motto_of_char_with_longest_motto
   "Write your SQL query here"
