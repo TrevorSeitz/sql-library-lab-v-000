@@ -36,13 +36,22 @@ end
 def select_series_title_with_most_human_characters
   "SELECT series.title
   FROM series
+  WHERE character.species = "human"
   INNER JOIN characters
   ON characters.id = series.subgenre_id
   INNER JOIN authors
   ON authors.id = series.author_id
   GROUP BY series
-  ORDER BY COUNT(WHERE characters.species = human);"
+  ORDER BY COUNT(species)
+  LIMIT 1;"
 end
+
+def select_value_and_count_of_most_prolific_species
+  "SELECT species, COUNT(species)
+  FROM characters
+  GROUP BY species
+  ORDER BY 2 DESC
+  LIMIT 1"
 
 def select_character_names_and_number_of_books_they_are_in
   "Write your SQL query here"
