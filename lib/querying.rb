@@ -41,7 +41,7 @@ def select_series_title_with_most_human_characters
   INNER JOIN authors
   ON authors.id = series.author_id
   GROUP BY series
-  ORDER BY COUNT(characters.species = human);"
+  ORDER BY COUNT(WHERE characters.species = human);"
 end
 
 def select_character_names_and_number_of_books_they_are_in
