@@ -36,7 +36,7 @@ end
 def select_series_title_with_most_human_characters
   "SELECT series.title
   FROM series
-  WHERE character.species = "human"
+  WHERE character.species = human
   INNER JOIN characters
   ON characters.id = series.subgenre_id
   INNER JOIN authors
